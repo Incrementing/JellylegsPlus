@@ -1,0 +1,21 @@
+name: JellylegsPlus
+description: Jellylegs plugin for server admins that love customisation.
+author: Incrementing
+version: 1.0
+main: main.incrementing.pw.Jellylegs
+
+commands:
+ jellylegs:
+  description: Toggle jellylegs on and off.
+  aliases: [jl, jelly, legs]
+
+permission:
+ jellylegs.*:
+     description: Gives access to all jellylegs permissions.
+     children:
+       jellylegs.toggle.others: true
+       jellylegs.toggle: true
+ jellylegs.toggle.others:
+     description: Gives access to toggle other players jellylegs.
+ jellylegs.toggle:
+     description: Gives access to toggle jellylegs.
