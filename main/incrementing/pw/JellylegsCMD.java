@@ -76,7 +76,7 @@ public class JellylegsCMD implements CommandExecutor {
                             else {
                                 tFile.getConf().set("isenabled", true);
                                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', Jellylegs.getInstance().getConfig().getString("messages.toggled_on_for_other").replaceAll("#player#", target.getName())));
-                                p.sendMessage(ChatColor.translateAlternateColorCodes('&', Jellylegs.getInstance().getConfig().getString("messages.toggled_on_by_other").replaceAll("#player#", p.getName())));
+                                target.sendMessage(ChatColor.translateAlternateColorCodes('&', Jellylegs.getInstance().getConfig().getString("messages.toggled_on_by_other").replaceAll("#player#", p.getName())));
                                 tFile.saveConf();
                             }
                         }
